@@ -1,0 +1,9 @@
+{% extends "base_generic.html" %}
+
+{% block title %}<title>{{ author.last_name }}</title>{% endblock %}
+
+{% block content %}
+  <h1>{{ author.first_name }} {{ author.last_name }}</h1>
+  <p><a href="{% url 'author_update' author.pk %}">Update</a></p>
+  <p><a href="{% url 'author_delete' author.pk %}">Delete</a></p>
+{% endblock %}
